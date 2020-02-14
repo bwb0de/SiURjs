@@ -1,0 +1,180 @@
+/* Aparência geral dos elementos da página */
+
+@font-face {
+	font-family: 'Libertine Regular';
+	src: url('/fonts/LinBiolinum_Rah.TTF');
+	font-weight: normal;
+	font-style: normal;}
+
+
+@font-face {
+	font-family: 'Libertine Bold';
+	src: url('/fonts/LinBiolinum_RBah.ttf');
+	font-weight: normal;
+	font-style: normal;}
+
+
+/* Resluções */
+@media only screen and (min-width: 240px) {
+  .sheet_table{
+		width: auto;}
+}
+
+@media only screen and (min-width: 270px) {
+ .sheet_table{
+		width: auto;}
+}
+
+@media only screen and (min-width: 480px) {
+ .sheet_table{
+		width: auto;}
+}
+
+@media only screen and (min-width: 768px) {
+ .sheet_table{
+		width: auto;}
+}
+
+@media only screen and (min-width: 1024px) {
+ .sheet_table{
+		width: 80%;}
+}
+
+
+.menubt1{
+	position: relative;
+	}
+
+.menubt1:hover{
+	background-color: red;}
+
+
+.menubt2{
+	position: relative;
+	width:20px;
+	height: 20px;
+	}
+
+.minifont{
+	font-size: 12px;
+	margin-top: -10px;}
+
+.menubt2:hover{
+	background-color: rgba(0,0,0,0.10);}
+
+.form_label{
+	width:15%;
+	text-align: right;
+}
+
+.form_label_tabled{
+	width:40%;
+	text-align: right;
+}
+
+.input_numeric{
+	width:50px;
+}
+
+.input_text{
+	width:50%;
+}
+
+.site_title{
+	font-family: 'Libertine Bold';
+
+}
+
+body{
+	font-family: 'Libertine Regular';
+	}
+
+.header-fix{
+	position: fixed;
+	width: 105%;
+	margin-top: -14px;
+	margin-left: -20px;}
+
+.corner-alert{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 36%;
+	width:60%;}
+
+.ico{
+	width: 16.666666667%;
+	text-align: center;
+	vertical-align: middle;}
+
+.sheet_sec{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.sheet_colh{
+	font-weight: bold;
+	text-align: center;
+}
+.sheet_col{
+	vertical-align: top;
+}
+
+h4.vantagem{
+	color: red;
+}
+
+.txp{
+	text-indent: 15mm;
+	text-align: justify;
+	padding-bottom: 10px;
+	font-size: 17px;}
+
+.txp2{
+	text-align: justify;
+	padding-bottom: 10px;
+	font-size: 17px;}
+
+.hint{
+	text-align: center;
+	padding-bottom: 10px;
+	margin-left: 30mm;
+	margin-right: 30mm;
+	background-color: yellow;
+	font-size: 17px;}
+
+li.dot{
+	list-style-position: outside;
+	text-align: justify;
+	margin-left: 15mm;
+	font-size: 17px;
+}
+
+li.circle{
+	list-style-position: outside;
+	text-align: justify;
+	list-style-type: circle;
+	margin-left: 30mm;
+	font-size: 17px;
+}
+
+li.square{
+	list-style-position: outside;
+	text-align: justify;
+	list-style-type: square;
+	margin-left: 45mm;
+	font-size: 17px;
+}
+
+
+/*<div style="width: 100%; margin-top: -30px; margin-left: -15px;">*/
+footer{
+	position: fixed;
+	margin-left: -20px;
+	bottom: 0px;
+	margin-right: -6px;
+	height: 20px;
+	width:101%;
+	text-align: center;}
+
+li{
+	margin-left: 30px;}

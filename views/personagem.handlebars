@@ -1,0 +1,373 @@
+<div id="app">
+    
+    <!-- Capa -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="/img/{{pcfileinfo.imagem}}" alt="">
+        <h1 class="text-uppercase mb-0">{{pcfileinfo.nome}}</h1>
+        <h2 class="font-weight-light mb-0">{{pcfileinfo.conceito}}</h2>
+        <input type="text" id="page_ref" value="{{page_ref}}" hidden>
+      </div>
+    </header>
+
+    
+    <!-- Informações gerais -->
+    <section class="bg-secondary text-white mb-0" id="info_geral">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Informações gerais</h2>
+        <!--<hr class="star-light mb-5">-->
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+            <p style="font-size: 20px; text-aling: center;"><b>Metatipo: </b>{{pcfileinfo.metatipo}}</p>
+            <p style="font-size: 20px"><b>Personalidade: </b>{{pcfileinfo.personalidade}}</p>
+            <p style="font-size: 20px"><b>Profissão: </b>{{pcfileinfo.profissao}}</p>
+            <p style="font-size: 20px"><b>Afiliações: </b>{{pcfileinfo.afiliacoes}}</p>
+            <p style="font-size: 20px"><b>Gênero: </b>{{pcfileinfo.genero}}</p>
+            <p style="font-size: 20px"><b>Idade: </b>{{pcfileinfo.idade}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preludio -->
+    <section class="bg-white mb-0" id="preludio">
+      <div class="container text-secondary">
+        <h2 class="text-center text-uppercase">Prelúdio</h2>
+        <!--<hr class="star-light mb-5">-->
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+            <p class="lead text-center">{{pcfileinfo.preludio}}</p>
+          </div>
+        </div>
+        <hr class="star-dark mb-5">
+      </div>
+    </section>
+
+    <!-- Atributos -->
+    <section class="bg-primary text-white mb-0" id="atributos">
+      <div class="container  ">
+        <h2 class="text-center text-uppercase">Atributos</h2>
+        <div class="row">
+          <div class="col-lg-4 ml-auto">
+            <h3 class="text-center text-uppercase">Físicos</h3>
+            <table style="font-size: 20px; width: 100%;">
+              <tr>
+                <td></td>
+                <td class="text-center"><b>NV</b></td>
+                <td class="text-center"><b>TAU</b></td>
+                <td class="text-center"><b>TAD</b></td>
+                <td class="text-center"><b>TC</b></td>                                                
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Força:</b></td>
+                {{#each pcfileinfo.atributos.forca}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Agilidade:</b></td>
+                {{#each pcfileinfo.atributos.agilidade}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Destreza:</b></td>
+                {{#each pcfileinfo.atributos.destreza}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Vigor:</b></td>
+                {{#each pcfileinfo.atributos.vigor}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+            </table>
+          </div>
+
+          <div class="col-lg-4 ml-auto">
+            <h3 class="text-center text-uppercase">Sociais</h3>
+            <table style="font-size: 20px; width: 100%;">
+              <tr>
+                <td></td>
+                <td class="text-center"><b>NV</b></td>
+                <td class="text-center"><b>TAU</b></td>
+                <td class="text-center"><b>TAD</b></td>
+                <td class="text-center"><b>TC</b></td>                                                
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Presença:</b></td>
+                {{#each pcfileinfo.atributos.presenca}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Manipulação:</b></td>
+                {{#each pcfileinfo.atributos.manipulacao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Compostura:</b></td>
+                {{#each pcfileinfo.atributos.compostura}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+            </table>
+          </div>
+
+          <div class="col-lg-4 ml-auto">
+            <h3 class="text-center text-uppercase">Mentais</h3>
+            <table style="font-size: 20px; width: 100%; padding-bottom: 25px;">
+              <tr>
+                <td></td>
+                <td class="text-center"><b>NV</b></td>
+                <td class="text-center"><b>TAU</b></td>
+                <td class="text-center"><b>TAD</b></td>
+                <td class="text-center"><b>TC</b></td>                                                
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Inteligência:</b></td>
+                {{#each pcfileinfo.atributos.inteligencia}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Raciocínio:</b></td>
+                {{#each pcfileinfo.atributos.raciocinio}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Sagacidade:</b></td>
+                {{#each pcfileinfo.atributos.sagacidade}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+              <tr>
+                <td style="width: 35%;" class="text-right"><b>Determinação:</b></td>
+                {{#each pcfileinfo.atributos.determinacao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capacidades -->
+    <section class="bg-secondary text-white mb-0" id="capacidades">
+      <div class="container  ">
+        <h2 class="text-center text-uppercase">Capacidades</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <h3 class="text-center text-uppercase">Práticas</h3>
+            <table style="font-size: 20px; width: 100%;">
+              <tr>
+                <td></td>
+                <td class="text-center"><b>NV</b></td>
+                <td class="text-center"><b>CP</b></td>
+                <td class="text-center"><b>CS</b></td>
+                <td class="text-center"><b>CT</b></td>                                                
+              </tr>
+              {{#if pcfileinfo.capacidades.armas_brancas}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Armas brancas:</b></td>
+                {{#each pcfileinfo.capacidades.armas_brancas}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.armas_de_gatilho}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Armas de gatilho:</b></td>
+                {{#each pcfileinfo.capacidades.armas_de_gatilho}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.arqueirismo}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Arqueirismo:</b></td>
+                {{#each pcfileinfo.capacidades.arqueirismo}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.briga}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Briga:</b></td>
+                {{#each pcfileinfo.capacidades.briga}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.conducao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Condução:</b></td>
+                {{#each pcfileinfo.capacidades.conducao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.dissimulacao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Dissimulação:</b></td>
+                {{#each pcfileinfo.capacidades.dissimulacao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.esportes}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Esportes:</b></td>
+                {{#each pcfileinfo.capacidades.esportes}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.furto}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Furto:</b></td>
+                {{#each pcfileinfo.capacidades.furto}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.sobrevivencia}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Sobrevivência:</b></td>
+                {{#each pcfileinfo.capacidades.sobrevivencia}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+            </table>
+          </div>
+
+          <div class="col-lg-4">
+            <h3 class="text-center text-uppercase">Relacionais</h3>
+            <table style="font-size: 20px; width: 100%;">
+              <tr>
+                <td></td>
+                <td class="text-center"><b>NV</b></td>
+                <td class="text-center"><b>CP</b></td>
+                <td class="text-center"><b>CS</b></td>
+                <td class="text-center"><b>CT</b></td>                                                
+              </tr>
+              {{#if pcfileinfo.capacidades.astucia}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Astúcia:</b></td>
+                {{#each pcfileinfo.capacidades.astucia}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.empatia}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Empatia:</b></td>
+                {{#each pcfileinfo.capacidades.empatia}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.expressao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Expressão:</b></td>
+                {{#each pcfileinfo.capacidades.expressao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.intimidacao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Intimidação:</b></td>
+                {{#each pcfileinfo.capacidades.intimidacao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.manha}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Manha:</b></td>
+                {{#each pcfileinfo.capacidades.manha}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.persuasao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Persuasão:</b></td>
+                {{#each pcfileinfo.capacidades.persuasao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.socializacao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Socialização:</b></td>
+                {{#each pcfileinfo.capacidades.socializacao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.trato_com_animais}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Trato com animais:</b></td>
+                {{#each pcfileinfo.capacidades.trato_com_animais}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+            </table>
+          </div>
+
+          <div class="col-lg-4">
+            <h3 class="text-center text-uppercase">Não cotidianas</h3>
+            <table style="font-size: 20px; width: 100%;">
+              <tr>
+                <td></td>
+                <td class="text-center"><b>NV</b></td>
+                <td class="text-center"><b>CP</b></td>
+                <td class="text-center"><b>CS</b></td>
+                <td class="text-center"><b>CT</b></td>                                                
+              </tr>
+              {{#if pcfileinfo.capacidades.ciencias}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Ciências:</b></td>
+                {{#each pcfileinfo.capacidades.ciencias}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.erudicao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Erudição:</b></td>
+                {{#each pcfileinfo.capacidades.erudicao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.informatica}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Informática:</b></td>
+                {{#each pcfileinfo.capacidades.informatica}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.investigacao}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Investigação:</b></td>
+                {{#each pcfileinfo.capacidades.investigacao}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.medicina}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Medicina:</b></td>
+                {{#each pcfileinfo.capacidades.medicina}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.psicologia}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Psicologia:</b></td>
+                {{#each pcfileinfo.capacidades.psicologia}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.ocultismo}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Ocultismo:</b></td>
+                {{#each pcfileinfo.capacidades.ocultismo}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.oficios}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Ofícios:</b></td>
+                {{#each pcfileinfo.capacidades.oficios}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+              {{#if pcfileinfo.capacidades.politica}}<tr>
+                <td style="width: 35%;" class="text-right"><b>Política:</b></td>
+                {{#each pcfileinfo.capacidades.politica}}<td style="width: 16.25%;" class="text-center">{{this}}</td>{{/each}}
+              </tr>{{/if}}
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Antecedentes -->
+    <section class="bg-white text-secondary mb-0" id="antecedentes">
+      <div class="container  ">
+        <h2 class="text-center text-uppercase">Antecedentes</h2>
+        <div class="row">
+          <div class="col-lg-12 ml-auto">
+            <p class="lead text-center">{{antecedentes}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipamentos -->
+    <section class="bg-primary text-white mb-0" id="equipamentos">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Equipamentos</h2>
+        
+        <div class="row mt-8">
+          <div class="col-lg-8 "><br><br><br>
+           <ul>
+             <p v-for="item in itens" style="font-size: 20px;"> <button @click="delEquipo(item)" class="btn btn-secondary btn-smallest mr-2" type="button">🞭</button>?{item.nome}</p>
+           </ul>
+          </div>
+        </div>
+
+        <form @submit.prevent="addToEquipo">
+            <div class="row">
+              <div class="col-lg-8">
+                <label for="novoitem">Incluir novo equipamento</label>
+                <input placeholder="Incluir novo equipamento" v-model="novoitem" class="form-control" id="novoitem" name="novoitem" type="text" required="required" data-validation-required-message="O campo está vazio!">
+              </div>
+              
+              <div class="col-lg-2">
+                <label for="novoitem_peso">Peso</label>
+                <input placeholder="Peso" v-model="novoitem_peso" class="form-control" id="novoitem_peso" name="novoitem_peso" type="text" required="required" data-validation-required-message="O campo está vazio!">
+              </div>
+              
+              <div class="col-lg-2">
+                <label for="novoitem_dano">Dano</label>
+                <input placeholder="Dano" v-model="novoitem_dano" class="form-control" id="novoitem_dano" name="novoitem_dano" type="text" required="required" data-validation-required-message="O campo está vazio!">
+              </div>
+                    
+            </div>
+
+            <div class="row">
+              <div class="form-group text-center col-lg-12">
+                <button type="submit" class="btn btn-secondary btn-xl" id="submit_equipo">Incluir</button>
+              </div>
+            </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Notas -->
+    <section class="bg-secondary text-white mb-0" id="notas">
+      <div class="container">
+        
+        <h2 class="text-center text-uppercase text-white mb-0">Notas</h2>
+        <div class="row mt-8">
+          <div class="col-lg-8 "><br><br>
+           <ul>
+             <p v-for="nota in notas" style="font-size: 20px;"><button @click="delNote(nota)" class="btn btn-primary btn-smallest mr-2" type="button">🞭</button>?{nota.nome}</p>
+           </ul>
+          </div>
+        </div>
+
+        <form @submit.prevent="addToNotes">
+        <div class="row">
+            <div class="col-lg-8 mx-auto"> 
+              <div class="control-group">
+                
+                  <label>Inserir nota</label>
+                  <input v-model="novanota" class="form-control" id="novanota" name="novanota" type="text" required="required" data-validation-required-message="O campo está vazio!">
+                  
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-xl" id="submit_note">Anotar</button>
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+    </section>
+</div>
+
+ 

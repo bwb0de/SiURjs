@@ -1,0 +1,12 @@
+<form action="/processar_formulario" method="POST">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    
+    <h2>{{titulo}}</h2>
+        <p>{{descricao}}</p>
+
+        {{{field_list}}}
+
+    <button type="submit" class="btn btn-primary">Registrar</button>
+
+</form>
+

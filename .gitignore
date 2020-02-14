@@ -1,0 +1,9 @@
+node_modules
+*~
+.DS_Store
+.directory
+credentials.js
+*pyc
+__pycache__
+layout_frags.html
+nfo
